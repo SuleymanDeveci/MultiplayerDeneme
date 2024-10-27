@@ -256,7 +256,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.5188679, g: 0, b: 0, a: 0.6313726}
+  m_Color: {r: 0, g: 0.062504135, b: 0.5176471, a: 0.6313726}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -632,8 +632,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af7819c08293a6842bba24bc6d7fa7dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Slider: {fileID: 6530771834463604269}
-  _NetworkedHealth: 0
+  StaminaSlider: {fileID: 6530771834463604269}
+  StaminaGainRate: 10
+  StaminaLoseRate: 50
+  _NetworkedStamina: 0
 --- !u!1 &6975791701110985710
 GameObject:
   m_ObjectHideFlags: 0
@@ -692,7 +694,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.8018868, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0.12710534, b: 0.8, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
