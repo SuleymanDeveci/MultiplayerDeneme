@@ -23,7 +23,7 @@ public class FirstPersonCamera : MonoBehaviour
 
         verticalRotation -= mouseY * VerticalSensitivity;        // aldigimiz inputu sensitiviy,ty degeri ile carpip verticalRotation degiskenine atiyoruz
         horizontalRotation += mouseX * HorizontalSensitivity;    // aldigimiz inputu sensitiviy,ty degeri ile carpip horizontalRotation degiskenine atiyoruz
-
+        verticalRotation = Mathf.Clamp(verticalRotation, -45, 80);   // kameranin cok yukari ve cok asagi bakmasini sinirlandiriyoruz
         transform.rotation = Quaternion.Euler(verticalRotation, horizontalRotation, 0);  // hesapladigimiz degiskenleri kameranin rotationuna uyguluyoruz
     }
 }

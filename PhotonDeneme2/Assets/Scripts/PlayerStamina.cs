@@ -10,19 +10,14 @@ public class PlayerStamina : NetworkBehaviour
 
     [Networked, OnChangedRender(nameof(StaminaChanged))] public float NetworkedStamina { get; set; }
 
-    private void Start()
-    {
-        NetworkedStamina = 100;
-    }
     private void FixedUpdate()
     {
         if(HasStateAuthority && Input.GetKey(KeyCode.LeftShift))
         {
             NetworkedStamina -= StaminaLoseRate * Time.deltaTime;
         }
-        else if(HasStateAuthority && !Input.GetKey(KeyCode.LeftShift) && NetworkedStamina < 100)
-        {
-            
+        else if(HasStateAuthority &&  !Input.GetKey(KeyCode.LeftShift) && NetworkedStamina < 100)
+        {   
             NetworkedStamina += StaminaGainRate * Time.deltaTime;
         }
     }
